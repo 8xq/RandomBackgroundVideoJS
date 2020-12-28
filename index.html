@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="./style.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+      <script src="./video.js"></script>
+      <title>RandomVideo.JS</title>
+   </head>
+   <body onload="LoadVideo()">
+      <center>
+         <br><br><br><br>
+         <br><br><br><br>
+         <div class="ContainBox">
+            <div class="vid">
+               <h1 id="Name"></h1>
+            </div>
+            <div class="ButtonContainer">
+               <button class="btn btn-primary btn-lg btn-block" onclick="PlayVideo()">Play video</button>
+               <button class="btn btn-warning btn-lg btn-block" onclick="PauseVideo()">Pause video</button>
+               <button class="btn btn-success btn-lg btn-block" onclick="GetRandomVideo()">New video</button>
+               <div class="VolumeTitle">
+                  <h7>Audio Volume</h7>
+               </div>
+               <input id="Volume" type="range" min="1" max="100" value="50" onchange="ChangeVolume(this.value);">
+            </div>
+         </div>
+      </center>
+      <video id="Video" playsinline autoplay loop>
+         <source src="Videos/DragonMaidEdit.mp4" type="video/mp4"></source>
+      </video>
+   </body>
+</html>
