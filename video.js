@@ -20,6 +20,7 @@ const LoadVideo = () => {
     BG_video = document.getElementById("Video");
     GetRandomVideo();
 }
+
 /*
 This function simply plays the video upon being invoked
 This function is called by a button click (play button)
@@ -27,6 +28,7 @@ This function is called by a button click (play button)
 const PlayVideo = () => {
     BG_video.play();
 }
+
 /*
 This function simply pauses the video upon being invoked
 This function is called by a button click (pause button)
@@ -52,7 +54,7 @@ const GetRandomVideo = () => {
     UpdateVideoSource(VideoFile);
     UpdateVideoTitle(VideoName);
     if (RemoveVideo)
-        Videos.splice(VideoIndex);
+    Videos.splice(VideoIndex);
 }
 
 /*
